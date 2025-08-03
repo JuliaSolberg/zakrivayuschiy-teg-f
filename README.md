@@ -1,1 +1,1 @@
-https://github.com/JuliaSolberg/zakrivayuschiy-teg-f
+https://github.com/JuliaSolberg/zakrivayuschiy-teg-f/index.html
