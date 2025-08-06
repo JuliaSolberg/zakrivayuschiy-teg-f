@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--main-font-family, sans-serif);
+  font-family: var(--main-font-family, sans-serif), sans-serif;
   font-variation-settings: 'wght' var(--card-text-weight, 400);
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-line-height, 21px);
@@ -61,13 +61,13 @@
 }
 
 .header-logo {
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, sans-serif), sans-serif;
   font-size: var(--logo-font);
   line-height: 100%;
 }
 
 .header-title {
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, sans-serif), sans-serif;
   font-size: var(--title-header-font);
   line-height: 100%;
   text-transform: uppercase;
@@ -75,8 +75,8 @@
 
 .card-title {
   font-variation-settings: 'wght' var(--card-text-title, 700);
-  line-height: var(--card-title-line-height, 25px);
-  margin: var(--card-title-vertical-margin, 3px) auto var(--card-title-vertical-margin, 3px) var(--card-title-left-margin, 10px);
+  line-height: 120%;
+  margin: var(--card-title-vertical-margin, 4px) var(--card-title-left-margin, 10px);
 }
 
 .card-image {
@@ -87,15 +87,17 @@
 
 .card-image-wrapper{
   position: relative;
+  border-top: var(--themes-border-weight, 2px) solid var(--themes-border-color, #000000);
+  border-bottom: var(--themes-border-weight, 2px) solid var(--themes-border-color, #000000);
 }
 
 .card-image-label {
   position: absolute;
   top: var(--card-image-label-margin, 25px);
   right: var(--card-image-label-margin, 25px);
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, sans-serif), sans-serif;
   font-size: var(--card-image-label-font-size, 14px);
-  /* opacity: 50%; */
+  opacity: 50%;
   text-transform: uppercase;
   pointer-events: none;
   mix-blend-mode: hard-light;
@@ -123,7 +125,7 @@
 .like-wrapper {
   display: flex;
   align-items: center;
-  gap: var(--like-button-gap-heart, 12px);
+  gap: var(--like-button-gap-heart, 7px);
   justify-self: flex-end;
   margin-right: var(--like-button-margin, 25px);
   margin-bottom: var(--like-button-margin, 25px);
@@ -144,12 +146,15 @@
 
 
 .card__like-button {
-  padding: var(--like-button-v-padding, 10px) var(--like-button-h-padding, 35px);
+  width: var(--like-button-width, 130px);
+  padding: var(--like-button-v-padding, 10px) var(--like-button-h-padding, 17px);
+  /*display: flex;
+  justify-content: center;*/
 }
 
 .button,
 .dialog-message {
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, sans-serif), sans-serif;
   font-size: var(--like-button-font-size, 14px);
 }
 
@@ -167,7 +172,7 @@
 }
 
 .dialog-form {
-  max-inline-size: var(--dialog-max-width, 395px);
+  max-inline-size: var(--dialog-max-width, 353px);
   /*max-block-size: var(--dialog-max-height, 191px);*/
   padding: var(--dialog-padding, 30px);
   border: none;
@@ -250,25 +255,14 @@
 } 
 
 .button__text,
-.button-save-text,
-.button-ok-text {
+.save-button svg {
   position: relative;
   z-index: 1;
   color: var(--bg-color, #FFFFFF);
+  fill: var(--bg-color, #FFFFFF);
   mix-blend-mode: difference;
   /*transition: transform 0.5s ease-in-out;*/
   transition: color 0.5s ease-in-out, fill 0.5s ease-in-out;
-}
-
-.save-button svg {
-  position: relative;
-  z-index: 2;
-  fill: var(--themes-border-color, #000000);
-  transition: fill 0.5s ease-in-out; 
-}
-
-.save-button:hover svg {
-  fill: var(--bg-color, #FFFFFF);
 }
 
 .card__icon-button:focus {
@@ -284,14 +278,14 @@
   transition: fill 0.1s linear;
 }
 
-.like-icon .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
@@ -334,14 +328,14 @@
   transition: fill 0.3s linear 0.06s;
 }
 
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart-scale 0.3s ease-in 0.1s forwards;
+}
+
 .like-icon.is-liked .sparks {
   opacity: 1;
   animation: sparks-fade 0.3s ease-in 0.3s forwards;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: heart-scale 0.3s ease-in 0.1s;
 }
 
 .gif-excited {
@@ -378,7 +372,7 @@
 
 @media (max-width: 376px) {
   :root {
-      --header-width: 100%;
+    --header-width: 100%;
   }
 
   .header {
@@ -388,4 +382,13 @@
   .save-button {
     flex-direction: column;
   }
+
+  .save-button svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog-form {
+    --dialog-max-width: 341px;
+}
 }
