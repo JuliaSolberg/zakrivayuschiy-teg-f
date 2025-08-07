@@ -1,54 +1,55 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --main-font-family: 'Inter-Variable';
-    --accent-font-family: 'PressStart2P';
-    --main-font-size: 18px;
-    --main-line-height: 21px;
-    --gap-between-cards: 50px;
-    --card-text-weight: 400;
-    --card-text-title: 700;
-    --card-title-line-height: 25px;
-    --card-title-vertical-margin: 4px;
-    --card-title-left-margin: 10px;
-    --card-text-top-margin: 27px;
-    --card-text-horizontal-margin: 25px;
-    --card-text-bottom-margin: 25px;
-    --bg-image: url(../images/background.svg);
-    --bg-color: #FFFFFF;
-    --header-width: clamp(20rem, 13.214rem + 33.929vw, 43.75rem);
-    --header-height: clamp(20.438rem, 19.705rem + 3.661vw, 23rem);
-    --margin-block-header: 100px;
-    --logo-font: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    --title-header-font: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --gap-logo-title: 20px;
-    --themes-background: #FFFFFF;
-    --themes-border-color: #000000;
-    --themes-border-weight: 2px;
-    --gap-card-paragraphs: 27px;
-    --like-button-gap-heart: 7px;
-    --like-button-margin: 25px;
-    --like-button-font-size: 14px;
-    --like-button-v-padding: 10px;
-    --like-button-h-padding: 17px;
-    --like-button-width: 130px;
-    --card-image-label-margin: 25px;
-    --card-image-label-font-size: 14px;
-    --save-button-gap: 8px;
-    --save-button-v-padding: 15px;
-    --save-button-h-padding: 20px;
-    --save-button-margin-bottom: 103px;
-    --dialog-max-width: 353px;
-    --dialog-max-height: 191px;
-    --dialog-padding: 30px;
-    --ok-button-padding: 12px;
-    --font-color: #000000;
-    --contour-color: #000000;
-    --animation-fill-color: #FF0000;
+  --main-font-family: "Inter-Variable";
+  --accent-font-family: "PressStart2P";
+  --main-font-size: 18px;
+  --main-line-height: 21px;
+  --gap-between-cards: 50px;
+  --card-text-weight: 400;
+  --card-text-title: 700;
+  --card-title-line-height: 25px;
+  --card-title-vertical-margin: 4px;
+  --card-title-left-margin: 10px;
+  --card-text-top-margin: 27px;
+  --card-text-horizontal-margin: 25px;
+  --card-text-bottom-margin: 25px;
+  --bg-image: url(../images/background.svg);
+  --bg-color: #ffffff;
+  --header-width: clamp(20rem, 13.214rem + 33.929vw, 43.75rem);
+  --header-height: clamp(20.438rem, 19.705rem + 3.661vw, 23rem);
+  --margin-block-header: 100px;
+  --logo-font: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --title-header-font: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --gap-logo-title: 20px;
+  --themes-background: #ffffff;
+  --themes-border-color: #000000;
+  --themes-border-weight: 2px;
+  --gap-card-paragraphs: 27px;
+  --like-button-gap-heart: 7px;
+  --like-button-margin: 25px;
+  --like-button-font-size: 14px;
+  --like-button-v-padding: 10px;
+  --like-button-h-padding: 17px;
+  --like-button-width: 130px;
+  --card-image-label-margin: 25px;
+  --card-image-label-font-size: 14px;
+  --save-button-gap: 8px;
+  --save-button-v-padding: 15px;
+  --save-button-h-padding: 20px;
+  --save-button-margin-bottom: 103px;
+  --dialog-max-width: 353px;
+  --dialog-max-height: 191px;
+  --dialog-padding: 30px;
+  --dialog-h-padding: 40px;
+  --ok-button-padding: 12px;
+  --font-color: #000000;
+  --contour-color: #000000;
+  --animation-fill-color: #ff0000;
 }
 
 @media (max-width: 375px) {
-    :root {
-        --header-width: 100%;
-    }
+  :root {
+    --header-width: 100%;
+  }
 }
